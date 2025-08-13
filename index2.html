@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Reciclaje</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fondo borroso con overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1740&q=80');
+            background-size: cover;
+            background-position: center;
+            filter: blur(4px);
+            z-index: -2;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 128, 0, 0.25); /* Verde translúcido */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center">
+
+    <main class="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-lg w-full max-w-sm">
+        
+        <!-- Encabezado -->
+        <header class="mb-6 text-center">
+            <!-- Icono reciclaje -->
+            <!--<svg class="mx-auto mb-3 w-12 h-12 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.28 5.22a.75.75 0 01.53 1.28L4.81 8.5h4.44a.75.75 0 010 1.5H4.81l2 2a.75.75 0 01-1.06 1.06l-3.25-3.25a.75.75 0 010-1.06l3.25-3.25a.75.75 0 01.53-.22zM13.72 14.78a.75.75 0 01-.53-1.28l2-2h-4.44a.75.75 0 010-1.5h4.44l-2-2a.75.75 0 011.06-1.06l3.25 3.25a.75.75 0 010 1.06l-3.25 3.25a.75.75 0 01-.53.22z" clip-rule="evenodd"/>
+            </svg> -->
+
+            <h1 class="text-2xl font-bold text-green-700">EcoRecolección</h1>
+              <h2 class="text-2xl font-bold text-green-700">Iniciar sesión</h2>
+            <p class="text-sm text-gray-600">Accede para contribuir al reciclaje responsable</p>
+        </header>
+
+        <!-- Formulario -->
+        <form>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-1">Correo</label>
+                <input id="email" type="email" placeholder="ejemplo@correo.com"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-medium mb-1">Contraseña</label>
+                <input id="password" type="password" placeholder="••••••••"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-300">
+                Entrar
+            </button>
+        </form>
+
+        <!-- Pie de página -->
+        <footer class="text-center text-sm text-gray-500 mt-4">
+            ¿No tienes cuenta? 
+            <a href="#" class="text-green-500 hover:underline">Regístrate</a>
+        </footer>
+    </main>
+
+</body>
+</html>
